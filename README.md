@@ -23,12 +23,12 @@ The analysis uses a housing dataset with 7,000 property records containing 22 fe
 ## Project Structure
 ```
 Logistic-Regression-Analysis/
-├── logistic_regression_analysis.ipynb  # main analysis notebook
-├── housing_dataset.csv                 # complete housing dataset
-├── training_dataset.csv               # processed training data
-├── test_dataset.csv                   # processed test data
-├── lra_env/                           # virtual environment
-└── README.md                          # project documentation
+|-- logistic_regression_analysis.ipynb  # main analysis notebook
+|-- housing_dataset.csv                 # complete housing dataset
+|-- training_dataset.csv               # processed training data
+|-- test_dataset.csv                   # processed test data
+|-- lra_env/                           # virtual environment
+\-- README.md                          # project documentation
 ```
 
 ## Analysis Methodology
@@ -86,8 +86,8 @@ Actual      0     1
 
 ## Logistic Regression Equation
 ```
-log(p/(1-p)) = 0.3154 + (2.3465 × Price) + (0.0310 × SquareFootage) 
-               + (-0.0065 × RenovationQuality) + (0.0541 × LocalAmenities)
+log(p/(1-p)) = 0.3154 + (2.3465 x Price) + (0.0310 x SquareFootage) 
+               + (-0.0065 x RenovationQuality) + (0.0541 x LocalAmenities)
 ```
 
 ## Key Findings
@@ -153,10 +153,10 @@ jupyter notebook logistic_regression_analysis.ipynb
 ## Methodology Validation
 
 ### Assumption Verification
-1. ✅ **Binary Dependent Variable**: IsLuxury contains only 0 and 1 values
-2. ✅ **Independence of Observations**: Each house record is independent
-3. ✅ **No Perfect Multicollinearity**: All VIF values < 2.0
-4. ✅ **Linearity of Log-odds**: Reasonable linear relationships observed
+1. [PASS] **Binary Dependent Variable**: IsLuxury contains only 0 and 1 values
+2. [PASS] **Independence of Observations**: Each house record is independent
+3. [PASS] **No Perfect Multicollinearity**: All VIF values < 2.0
+4. [PASS] **Linearity of Log-odds**: Reasonable linear relationships observed
 
 ### Feature Selection Justification
 RFE was selected as the optimal method because:
